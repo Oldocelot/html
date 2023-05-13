@@ -1,0 +1,89 @@
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: 'Courier New', monospace;
+    background-color: black;
+    color: #00FF00;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  .center-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .terminal {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px;
+    background-color: black;
+    -webkit-filter: blur(5px);
+    filter: blur(7px);
+  }
+  
+  .terminal-output {
+    margin: 0;
+    overflow: visible;
+  }
+  
+  @media (max-width: 768px) {
+    #input,
+    #output {
+      font-size: 42px;
+    }
+  }
+  
+  .terminal-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    height: 50%;
+    width: 100%;
+    margin: 0;
+  }
+  
+  #input,
+  #output {
+    font-family: 'Courier New', monospace;
+    font-size: 72px;
+    line-height: 1;
+  }
+  
+  #output {
+    pointer-events: none;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+  
+  #input {
+    height: 40px;
+    padding: 10px;
+    margin: 0;
+    border-bottom: 4px solid rgb(63, 55, 55);
+  }
